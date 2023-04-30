@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thirtyfour Program</title>
+  </head>
+  <body>
+    <script>
+      // 34. Write a js program to remove all occurrence of a word in given string.
+      function removeWordOccurrences(string, word) {
+        const regex = new RegExp(`\\b${word}\\b`, "gi");
+        return string.replace(regex, "");
+      }
+
+      const inputString = "The quick brown fox jumps over the lazy dog";
+      const wordToRemove = "the";
+      const result = removeWordOccurrences(inputString, wordToRemove);
+      console.log(result);
+    </script>
+  </body>
+</html>

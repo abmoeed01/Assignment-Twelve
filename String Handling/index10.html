@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ten Program</title>
+  </head>
+  <body>
+    <script>
+      // 10. Write a js program to count total number of words in a string.
+      function countWords(str) {
+        str = str.trim();
+
+        let words = str.split(/\s+/);
+
+        return words.length;
+      }
+
+      let sentence = "Hello, how are you today?";
+      let wordCount = countWords(sentence);
+      console.log("Total number of words:", wordCount);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twentyeight Program</title>
+  </head>
+  <body>
+    <script>
+      // 28. Write a js program to find first occurrence of a word in a given string.
+      function findFirstOccurrence(string, word) {
+        const words = string.split(" ");
+
+        for (let i = 0; i < words.length; i++) {
+          if (words[i].toLowerCase() === word.toLowerCase()) {
+            return i;
+          }
+        }
+
+        return -1;
+      }
+
+      const sentence = "The quick brown fox jumps over the lazy dog";
+      const searchWord = "brown";
+
+      const result = findFirstOccurrence(sentence, searchWord);
+
+      if (result !== -1) {
+        console.log(`The word "${searchWord}" first occurs at index ${result}`);
+      } else {
+        console.log(`The word "${searchWord}" does not occur in the string`);
+      }
+    </script>
+  </body>
+</html>

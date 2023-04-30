@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twentynine Program</title>
+  </head>
+  <body>
+    <script>
+      // 29. Write a js program to find last occurrence of a word in a given string.
+      function findLastOccurrence(str, word) {
+        const words = str.split(" ");
+        for (let i = words.length - 1; i >= 0; i--) {
+          if (words[i] === word) {
+            return i;
+          }
+        }
+        return -1; 
+      }
+
+      const sentence = "This is a sample sentence. It is a sample sentence.";
+      const searchWord = "sample";
+
+      const lastOccurrenceIndex = findLastOccurrence(sentence, searchWord);
+      if (lastOccurrenceIndex !== -1) {
+        console.log(
+          `Last occurrence of '${searchWord}' found at index ${lastOccurrenceIndex}`
+        );
+      } else {
+        console.log(`'${searchWord}' not found in the sentence.`);
+      }
+    </script>
+  </body>
+</html>

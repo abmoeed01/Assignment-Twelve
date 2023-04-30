@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thirtytwo Program</title>
+  </head>
+  <body>
+    <script>
+      // 32. Write a js program to remove first occurrence of a word from string.
+      function removeFirstOccurrence(str, word) {
+        const index = str.indexOf(word);
+
+        if (index !== -1) {
+          const before = str.substring(0, index);
+          const after = str.substring(index + word.length);
+          return before + after;
+        }
+
+        return str;
+      }
+
+      const inputString = "Hello world, hello universe, hello galaxy";
+      const wordToRemove = "hello";
+
+      const result = removeFirstOccurrence(inputString, wordToRemove);
+      console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3rd Program</title>
+  </head>
+  <body>
+    <script>
+      // 3. Write a js program to find sum of all array elements.
+      function calculateSum(array) {
+        let sum = 0;
+
+        for (let i = 0; i < array.length; i++) {
+          sum += array[i];
+        }
+
+        return sum;
+      }
+
+      const numbers = [1, 2, 3, 4, 5];
+      const sum = calculateSum(numbers);
+      console.log("The sum of the array elements is: " + sum);
+    </script>
+  </body>
+</html>

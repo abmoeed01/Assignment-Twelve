@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second Program</title>
+  </head>
+  <body>
+    <script>
+      // 2. Write a js program to print all negative elements in an array.
+      function printNegativeElements(array) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] < 0) {
+            console.log(array[i]);
+          }
+        }
+      }
+
+      const numbers = [5, -2, 10, -8, 3, -6];
+      printNegativeElements(numbers);
+    </script>
+  </body>
+</html>

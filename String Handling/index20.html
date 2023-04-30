@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twenty Program</title>
+  </head>
+  <body>
+    <script>
+      // 20. Write a js program to count frequency of each character in a string.
+      function countCharacterFrequency(str) {
+        const frequency = {};
+
+        str = str.toLowerCase();
+
+        for (let i = 0; i < str.length; i++) {
+          const char = str.charAt(i);
+
+          if (!isAlphabetic(char)) {
+            continue;
+          }
+
+          if (frequency[char]) {
+            frequency[char]++;
+          } else {
+            frequency[char] = 1;
+          }
+        }
+
+        return frequency;
+      }
+
+      function isAlphabetic(char) {
+        return /^[a-zA-Z]$/.test(char);
+      }
+
+      const inputString = "Hello, World!";
+      const result = countCharacterFrequency(inputString);
+      console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thirtythree Program</title>
+  </head>
+  <body>
+    <script>
+      // 33. Write a js program to remove last occurrence of a word in given string.
+      function removeLastOccurrence(str, word) {
+        var words = str.split(" ");
+
+        var lastIndex = words.lastIndexOf(word);
+
+        if (lastIndex !== -1) {
+          words.splice(lastIndex, 1);
+        }
+
+        var result = words.join(" ");
+
+        return result;
+      }
+
+      var inputString = "This is a test string. This is a test string.";
+      var wordToRemove = "test";
+
+      var modifiedString = removeLastOccurrence(inputString, wordToRemove);
+      console.log(modifiedString);
+    </script>
+  </body>
+</html>

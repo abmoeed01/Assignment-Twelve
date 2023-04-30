@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sixteen Program</title>
+  </head>
+  <body>
+    <script>
+      // 16. Write a js program to search all occurrences of a character in given string.
+      function searchOccurrences(str, char) {
+        let occurrences = [];
+        for (let i = 0; i < str.length; i++) {
+          if (str.charAt(i) === char) {
+            occurrences.push(i);
+          }
+        }
+        return occurrences;
+      }
+
+      const inputString = "Hello, World!";
+      const searchChar = "l";
+      const result = searchOccurrences(inputString, searchChar);
+      console.log(
+        `Occurrences of "${searchChar}" in "${inputString}":`,
+        result
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fifteen Program</title>
+  </head>
+  <body>
+    <script>
+      // 15. Write a js program to find last occurrence of a character in a given string.
+      function findLastOccurrence(str, char) {
+        for (let i = str.length - 1; i >= 0; i--) {
+          if (str.charAt(i) === char) {
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      const string = "Hello, World!";
+      const character = "r";
+      const lastIndex = findLastOccurrence(string, character);
+
+      console.log(`Last occurrence of "${character}" is at index ${lastIndex}`);
+    </script>
+  </body>
+</html>

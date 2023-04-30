@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twenty Program</title>
+  </head>
+  <body>
+    <script>
+      // 20. Write a js program to sort even and odd elements of array separately.
+      function sortEvenAndOdd(arr) {
+        const evenArr = [];
+        const oddArr = [];
+
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 === 0) {
+            evenArr.push(arr[i]);
+          } else {
+            oddArr.push(arr[i]);
+          }
+        }
+
+        evenArr.sort(function (a, b) {
+          return a - b;
+        });
+
+        oddArr.sort(function (a, b) {
+          return a - b;
+        });
+
+        return [...evenArr, ...oddArr];
+      }
+
+      const numbers = [5, 8, 2, 1, 9, 4, 7, 6, 3];
+      const sortedNumbers = sortEvenAndOdd(numbers);
+      console.log(sortedNumbers);
+    </script>
+  </body>
+</html>

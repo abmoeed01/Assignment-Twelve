@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thirtyone Program</title>
+  </head>
+  <body>
+    <script>
+      // 31. Write a js program to count occurrences of a word in a given string.
+      function countOccurrences(string, word) {
+        const words = string.split(" ");
+
+        let count = 0;
+
+        for (let i = 0; i < words.length; i++) {
+          if (words[i] === word) {
+            count++;
+          }
+        }
+
+        return count;
+      }
+
+      const sentence =
+        "This is a sample sentence to test the word count program.";
+      const wordToCount = "count";
+
+      const result = countOccurrences(sentence, wordToCount);
+      console.log(
+        `The word "${wordToCount}" occurs ${result} times in the given sentence.`
+      );
+    </script>
+  </body>
+</html>

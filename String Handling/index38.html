@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thirtyeight Program</title>
+  </head>
+  <body>
+    <script>
+      // 38. Write a js program to remove all extra blank spaces from given string.
+      function removeExtraSpaces(str) {
+        str = str.replace(/\s+/g, " ");
+
+        str = str.trim();
+
+        return str;
+      }
+
+      var input = "   This    is   a   test    string.   ";
+      var output = removeExtraSpaces(input);
+      console.log(output);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thirty Program</title>
+  </head>
+  <body>
+    <script>
+      // 30. Write a js program to search all occurrences of a word in given string.
+      function searchOccurrences(word, str) {
+        const regex = new RegExp(`\\b${word}\\b`, "gi");
+
+        const occurrences = [];
+
+        let match;
+        while ((match = regex.exec(str)) !== null) {
+          occurrences.push(match.index);
+        }
+
+        return occurrences;
+      }
+
+      const sentence =
+        "The quick brown fox jumps over the lazy dog. The fox is quick.";
+      const wordToSearch = "quick";
+      const result = searchOccurrences(wordToSearch, sentence);
+
+      console.log(`Occurrences of '${wordToSearch}':`, result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twentysix Program</title>
+  </head>
+  <body>
+    <script>
+      // 26. Write a js program to replace last occurrence of a character with another in a string.
+      function replaceLastOccurrence(str, find, replace) {
+        const lastIndex = str.lastIndexOf(find);
+        if (lastIndex === -1) {
+          return str; 
+        }
+
+        const before = str.slice(0, lastIndex);
+        const after = str.slice(lastIndex + 1);
+
+        return before + replace + after;
+      }
+
+      const originalString = "Hello World";
+      const modifiedString = replaceLastOccurrence(originalString, "o", "x");
+      console.log(modifiedString);
+    </script>
+  </body>
+</html>

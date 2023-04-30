@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twentyone Program</title>
+  </head>
+  <body>
+    <script>
+      // 21. Write a js program to left rotate an array.
+      function leftRotateArray(arr, rotations) {
+        const effectiveRotations = rotations % arr.length;
+
+        const rotatedArray = arr
+          .slice(effectiveRotations)
+          .concat(arr.slice(0, effectiveRotations));
+
+        return rotatedArray;
+      }
+
+      const array = [1, 2, 3, 4, 5];
+      const rotations = 2;
+      const rotatedArray = leftRotateArray(array, rotations);
+
+      console.log(rotatedArray);
+    </script>
+  </body>
+</html>

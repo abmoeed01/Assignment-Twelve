@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twentyone Program</title>
+  </head>
+  <body>
+    <script>
+      // 21. Write a js program to remove first occurrence of a character from string.
+      function removeFirstOccurrence(str, char) {
+        const index = str.indexOf(char); // Find the index of the first occurrence
+
+        if (index !== -1) {
+          return str.slice(0, index) + str.slice(index + 1); // Return the string without the character
+        }
+
+        return str; 
+      }
+
+      const inputString = "Hello, world!";
+      const charToRemove = "o";
+      const result = removeFirstOccurrence(inputString, charToRemove);
+      console.log(result);
+    </script>
+  </body>
+</html>

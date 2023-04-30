@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Six Program</title>
+  </head>
+  <body>
+    <script>
+      // 6. Write a js program to count total number of even and odd elements in an array.
+      function countEvenOdd(arr) {
+        const count = arr
+          .map((num) => (num % 2 === 0 ? "even" : "odd"))
+          .reduce((acc, val) => {
+            acc[val] = (acc[val] || 0) + 1;
+            return acc;
+          }, {});
+
+        return count;
+      }
+
+      const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12];
+      const result = countEvenOdd(numbers);
+
+      console.log("Even count:", result.even);
+      console.log("Odd count:", result.odd);
+    </script>
+  </body>
+</html>

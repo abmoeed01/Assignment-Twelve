@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twentyfive Program</title>
+  </head>
+  <body>
+    <script>
+      // 25. Write a js program to replace first occurrence of a character with another in a string.
+      function replaceFirstOccurrence(str, findChar, replaceChar) {
+        const index = str.indexOf(findChar);
+
+        if (index !== -1) {
+          const before = str.slice(0, index);
+          const after = str.slice(index + 1);
+          return before + replaceChar + after;
+        }
+
+        return str;
+      }
+
+      const originalString = "Hello, World!";
+      const replacedString = replaceFirstOccurrence(originalString, "o", "0");
+
+      console.log("Original string:", originalString);
+      console.log("Replaced string:", replacedString);
+    </script>
+  </body>
+</html>

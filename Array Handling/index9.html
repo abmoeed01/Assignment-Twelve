@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nine program</title>
+  </head>
+  <body>
+    <script>
+      // 9. Write a js program to insert an element in an array.
+      let array = [1, 2, 3, 4, 5];
+
+      function insertElement(array, index, element) {
+        array.splice(index, 0, element);
+      }
+
+      insertElement(array, 2, 10);
+
+      console.log(array);
+    </script>
+  </body>
+</html>

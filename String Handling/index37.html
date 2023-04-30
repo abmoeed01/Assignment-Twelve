@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thirtyseven Program</title>
+  </head>
+  <body>
+    <script>
+      // 37. Write a js program to trim both leading and trailing white space characters from given string.
+      function trimString(str) {
+        const trimmedStr = str.replace(/^\s+|\s+$/g, "");
+        return trimmedStr;
+      }
+
+      const inputString = "   Hello, World!   ";
+      const trimmedString = trimString(inputString);
+      console.log(trimmedString);
+    </script>
+  </body>
+</html>
